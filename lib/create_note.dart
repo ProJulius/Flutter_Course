@@ -13,7 +13,7 @@ class CreateNote extends StatelessWidget {
     );
   }
 
-  _body() {
+  Widget _body() {
     return TextField();
   }
 

@@ -15,8 +15,6 @@ class GridNote extends StatefulWidget {
 class _GridNote extends State<GridNote> {
   String _note = 'Trung vip pro';
 
-  get onPressed => null;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,9 +24,9 @@ class _GridNote extends State<GridNote> {
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(builder: (context) => CreateNote()),
+                  '/create',
                 );
               },
               icon: Icon(
@@ -42,7 +40,7 @@ class _GridNote extends State<GridNote> {
     );
   }
 
-  _body() {
+  Widget _body() {
     return Container(
       child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -58,12 +56,13 @@ class _GridNote extends State<GridNote> {
     );
   }
 
-  _noteText() {
+  Widget _noteText() {
     return InkWell(
       onTap: (){
-        Navigator.push(
+        Navigator.pushNamed(
           context,
-          MaterialPageRoute(builder: (context) => NoteDetail(note: _note)),
+          '/detail',
+          arguments: _note,
         );
       },
       child: Container(
