@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_git/screen/grid_note/grid_note_screen.dart';
+import 'package:test_git/screen/stream/stream_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const GridNoteScreen(),
+      home: StreamScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
